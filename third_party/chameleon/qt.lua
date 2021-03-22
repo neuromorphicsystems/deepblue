@@ -20,16 +20,16 @@ local os_to_default_configuration = {
         linkoptions = {},
     },
     macosx = {
-        moc = '/usr/local/opt/qt/bin/moc',
-        moc_includedirs = {'/usr/local/opt/qt/include/QtQml'},
+        moc = '/usr/local/opt/qt@5/bin/moc',
+        moc_includedirs = {'/usr/local/opt/qt@5/include/QtQml'},
         includedirs = {
-            '/usr/local/opt/qt/include',
-            '/usr/local/opt/qt/include/QtQml'},
+            '/usr/local/opt/qt@5/include',
+            '/usr/local/opt/qt@5/include/QtQml'},
         libdirs = {},
         links = {},
         buildoptions = {'-Wno-comma'},
         linkoptions = {
-            '-F /usr/local/opt/qt/lib',
+            '-F /usr/local/opt/qt@5/lib',
             '-framework QtCore',
             '-framework QtGui',
             '-framework QtQml',
