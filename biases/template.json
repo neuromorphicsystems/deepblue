@@ -22,7 +22,7 @@
     "pullup_y_encoder": 120,
     "control_em_timeout": 49,
     "control_sequential_em_timeout":45,
-    "control_x_acknoledge_timeout": 56,
+    "control_x_acknowledge_timeout": 56,
     "control_latch_cell_scan_pulldown": 134,
     "control_x_request_pulldown": 87
 }
