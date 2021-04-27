@@ -70,8 +70,8 @@ sepia::ccamatis::parameters parse_parameters(std::unique_ptr<std::istream> json_
             parameters.biases.control_em_timeout = bias;
         } else if (key == "control_sequential_em_timeout") {
             parameters.biases.control_sequential_em_timeout = bias;
-        } else if (key == "control_x_acknoledge_timeout") {
-            parameters.biases.control_x_acknoledge_timeout = bias;
+        } else if (key == "control_x_acknowledge_timeout") {
+            parameters.biases.control_x_acknowledge_timeout = bias;
         } else if (key == "control_latch_cell_scan_pulldown") {
             parameters.biases.control_latch_cell_scan_pulldown = bias;
         } else if (key == "control_x_request_pulldown") {

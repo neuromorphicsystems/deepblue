@@ -60,7 +60,7 @@ namespace sepia {
                 uint8_t pullup_y_encoder;
                 uint8_t control_em_timeout;
                 uint8_t control_sequential_em_timeout;
-                uint8_t control_x_acknoledge_timeout;
+                uint8_t control_x_acknowledge_timeout;
                 uint8_t control_latch_cell_scan_pulldown;
                 uint8_t control_x_request_pulldown;
             } biases;
@@ -243,7 +243,7 @@ namespace sepia {
                     camera_parameters.biases.pullup_y_encoder,
                     camera_parameters.biases.control_em_timeout,
                     camera_parameters.biases.control_sequential_em_timeout,
-                    camera_parameters.biases.control_x_acknoledge_timeout,
+                    camera_parameters.biases.control_x_acknowledge_timeout,
                     camera_parameters.biases.control_latch_cell_scan_pulldown,
                     camera_parameters.biases.control_x_request_pulldown,
                 }};
@@ -271,7 +271,7 @@ namespace sepia {
                     _previous_parameters.biases.pullup_y_encoder,
                     _previous_parameters.biases.control_em_timeout,
                     _previous_parameters.biases.control_sequential_em_timeout,
-                    _previous_parameters.biases.control_x_acknoledge_timeout,
+                    _previous_parameters.biases.control_x_acknowledge_timeout,
                     _previous_parameters.biases.control_latch_cell_scan_pulldown,
                     _previous_parameters.biases.control_x_request_pulldown,
                 }};
