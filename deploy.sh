@@ -1,4 +1,4 @@
-host='pi@192.168.0.9'
+host='pi@20.0.0.3'
 path='atis_recorder'
 
 rsync -avz --exclude build ./ $host:$path/
