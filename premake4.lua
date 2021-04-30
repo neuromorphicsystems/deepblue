@@ -28,8 +28,8 @@ solution 'atis'
             flags {'Symbols'}
         configuration 'linux'
             links {'pthread', 'usb-1.0', 'stdc++fs'}
-            buildoptions {'-std=c++17'}
-            linkoptions {'-std=c++17'}
+            buildoptions {'-std=c++17', '-Wno-psabi'}
+            linkoptions {'-std=c++17', '-Wno-psabi'}
         configuration 'macosx'
             includedirs {'/usr/local/include'}
             libdirs {'/usr/local/lib'}
