@@ -40,6 +40,7 @@ solution 'atis'
             files {'.clang-format'}
             includedirs {'C:\\Include'}
             links {'C:\\Windows\\SysWOW64\\libusb-1.0'}
+            buildoptions {'/std:c++17'}
 
     if not _OPTIONS['raspberry-pi'] then
         project 'raw_to_es'
@@ -65,6 +66,7 @@ solution 'atis'
                 linkoptions {'-std=c++17'}
             configuration 'windows'
                 files {'.clang-format'}
+                buildoptions {'/std:c++17'}
 
         project 'viewer'
             kind 'ConsoleApp'
@@ -104,6 +106,8 @@ solution 'atis'
                 files {'.clang-format'}
                 includedirs {'C:\\Include'}
                 links {'C:\\Windows\\SysWOW64\\libusb-1.0'}
+                buildoptions {'/std:c++17'}
+
 
         project 'player'
             kind 'ConsoleApp'
@@ -143,4 +147,5 @@ solution 'atis'
                 files {'.clang-format'}
                 includedirs {'C:\\Include'}
                 links {'C:\\Windows\\SysWOW64\\libusb-1.0'}
+                buildoptions {'/std:c++17'}
     end
