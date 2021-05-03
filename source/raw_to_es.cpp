@@ -46,8 +46,7 @@ int main(int argc, char* argv[]) {
                 sepia::atis_event event{
                     static_cast<uint64_t>(warps) * (1ull << 32) + t_offset
                         + ((static_cast<uint16_t>(buffer[index + 3] & 0b1111) << 7) | (buffer[index + 2] >> 1)),
-                    static_cast<uint16_t>(
-                        (static_cast<uint16_t>(buffer[index + 2] & 1) << 8) | buffer[index + 1]),
+                    static_cast<uint16_t>((static_cast<uint16_t>(buffer[index + 2] & 1) << 8) | buffer[index + 1]),
                     static_cast<uint16_t>(height - 1 - buffer[index]),
                     ((buffer[index + 3] >> 5) & 0b1) == 1,
                     ((buffer[index + 3] >> 4) & 0b1) == 1};

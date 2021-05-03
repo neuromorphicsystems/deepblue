@@ -147,8 +147,8 @@ namespace sepia {
             /// get_string_descriptor_ascii wraps libusb_get_string_descriptor_ascii.
             virtual std::string get_string_descriptor_ascii(uint8_t descriptor_index, uint8_t size = 255) {
                 std::vector<uint8_t> buffer(size);
-                auto bytes_read = libusb_get_string_descriptor_ascii(
-                    _handle.get(), descriptor_index, buffer.data(), size);
+                auto bytes_read =
+                    libusb_get_string_descriptor_ascii(_handle.get(), descriptor_index, buffer.data(), size);
                 throw_on_error("getting the descriptor", bytes_read);
                 return std::string(buffer.begin(), std::next(buffer.begin(), bytes_read));
             }

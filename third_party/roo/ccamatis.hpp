@@ -67,8 +67,8 @@ namespace sepia {
         });
 
         /// default_parameters provides camera parameters tuned for standard use.
-        constexpr parameters default_parameters{{207, 243, 216, 239, 42,  51,  39,  61,  154, 54, 47, 57,  243,
-                                                 235, 131, 155, 151, 117, 162, 162, 120, 49,  45, 56, 134, 87}};
+        constexpr parameters default_parameters{{208, 217, 221, 237, 37, 47,  33,  60,  154, 39, 33, 49,  248,
+                                                 233, 126, 155, 169, 69, 162, 162, 119, 41,  44, 55, 133, 86}};
 
         /// base_camera is a common base type for Davis346 cameras.
         class base_camera : public sepia::parametric_camera<parameters> {
@@ -128,8 +128,8 @@ namespace sepia {
             /// biases_tensions lists the voltage level used by each bias.
             /// false stands for 0x5900, and true for 0x7900.
             static constexpr std::array<bool, 26> biases_voltages{
-                {false, false, false, false, true, true,  true,  true, true, true, true, true,  false,
-                 false, false, false, false, true, false, false, true, true, true, true, false, true}};
+                {false, false, false, false, true, true,  true,  true, false, true, true, true,  false,
+                 false, true,  false, false, true, false, false, true, true,  true, true, false, true}};
 
             /// initialise is called by constructors.
             virtual void initialise(const std::string& serial, const std::chrono::steady_clock::duration& timeout) {
@@ -141,6 +141,7 @@ namespace sepia {
                         break;
                     }
                 }
+
                 _interface.control_transfer("setting the role", 0x40, 0x56, 0x001a, 0x0000, {0, 0, 0, 0x01});
                 _interface.control_transfer("setting the role", 0x40, 0x56, 0x041a, 0x0000, {0, 0, 0, 0x02});
                 send_parameters(_parameters, true);
@@ -291,9 +292,7 @@ namespace sepia {
                     message.insert(
                         message.end(), {0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01c});
                     _interface.control_transfer("loading the biases", 0x40, 0x61, 0x0000, 0x0000, message);
-                    _interface.control_transfer("loading the biases", 0x40, 0x62, 0x0000, 0x0000, message);
                     _interface.control_transfer("flushing the biases", 0x40, 0x56, 0x000a, 0x0000, {0, 0, 0, 0x40});
-                    _interface.control_transfer("flushing the biases", 0x40, 0x56, 0x040a, 0x0000, {0, 0, 0, 0x40});
                 }
                 _previous_parameters = camera_parameters;
             }

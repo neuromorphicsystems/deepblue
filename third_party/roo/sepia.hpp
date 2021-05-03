@@ -592,8 +592,8 @@ namespace sepia {
             _bytes_size = 0;
         }
 
-        /// offset_and_previous_t returns the number of bytes consummed since the last event boundary,
-        /// and the timestamp of the last event.
+        /// offset_and_previous_t returns the number of bytes consummed since the last
+        /// event boundary, and the timestamp of the last event.
         virtual std::pair<std::size_t, uint64_t> offset_and_previous_t() const {
             return _offset_and_previous_t;
         }
@@ -671,8 +671,8 @@ namespace sepia {
             _state = state::idle;
         }
 
-        /// offset_and_previous_t returns the number of bytes consummed since the last event boundary,
-        /// and the timestamp of the last event.
+        /// offset_and_previous_t returns the number of bytes consummed since the last
+        /// event boundary, and the timestamp of the last event.
         virtual std::pair<std::size_t, uint64_t> offset_and_previous_t() const {
             return _offset_and_previous_t;
         }
@@ -753,8 +753,8 @@ namespace sepia {
             _state = state::idle;
         }
 
-        /// offset_and_previous_t returns the number of bytes consummed since the last event boundary,
-        /// and the timestamp of the last event.
+        /// offset_and_previous_t returns the number of bytes consummed since the last
+        /// event boundary, and the timestamp of the last event.
         virtual std::pair<std::size_t, uint64_t> offset_and_previous_t() const {
             return _offset_and_previous_t;
         }
@@ -853,8 +853,8 @@ namespace sepia {
             _state = state::idle;
         }
 
-        /// offset_and_previous_t returns the number of bytes consummed since the last event boundary,
-        /// and the timestamp of the last event.
+        /// offset_and_previous_t returns the number of bytes consummed since the last
+        /// event boundary, and the timestamp of the last event.
         virtual std::pair<std::size_t, uint64_t> offset_and_previous_t() const {
             return _offset_and_previous_t;
         }

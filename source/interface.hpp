@@ -1,9 +1,5 @@
 #pragma once
 
-#include <chrono>   // @DEV
-#include <iostream> // @DEV
-#include <thread>   // @DEV
-
 /// interface controls the external LED and switch.
 /// A dummy implementation is provided for non-rpi hosts.
 #ifdef RASPBERRY_PI
